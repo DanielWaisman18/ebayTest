@@ -10,10 +10,10 @@ import org.openqa.selenium.support.ui.Select;
 public class advancedSearchPage {
 
     @FindBy(id = "gh-as-a")
-    private WebElement advancedButton; // in the home page
+    private WebElement advancedButton;
 
     @FindBy(className = "textbox__control")
-    private WebElement searchBoxAdvanced; // in the advanced search page
+    private WebElement searchBoxAdvanced;
 
     @FindBy(id = "s0-1-17-4[0]-7[1]-_in_kw")
     private WebElement dropDownCategory;
@@ -24,8 +24,8 @@ public class advancedSearchPage {
     @FindBy(xpath = "//button[contains(text(),'Search')]")
     private WebElement buttonAdvancedSearch;
 
-    @FindBy(xpath = "//h1[contains(text(),'results for')]")
-    private WebElement resultSearchText;  // in the results page = to check if the h1 contains the item to find
+    @FindBy(className = "srp-controls__count-heading")
+    private WebElement resultSearchText;
 
 
 
