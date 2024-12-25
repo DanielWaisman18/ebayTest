@@ -20,7 +20,7 @@ public class resultsHeadingPage {
 
     public resultsHeadingPage(WebDriver driver) {
         this.driver = driver;
-        PageFactory.initElements(driver, this); // Initialize @FindBy elements
+        PageFactory.initElements(driver, this); 
     }
 
     public void checkIfIsHeading(){
