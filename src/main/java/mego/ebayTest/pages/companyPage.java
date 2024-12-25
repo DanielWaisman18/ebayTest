@@ -61,7 +61,6 @@ public class companyPage {
         twitterLink.click();
         sleep(3000);
 
-        // Wait for the new window to open and switch to it
         Set<String> windowHandles = driver.getWindowHandles();
         for (String handle : windowHandles) {
             if (!handle.equals(mainWindowHandle)) {
@@ -70,18 +69,15 @@ public class companyPage {
             }
         }
 
-        // Assert that the current URL matches the expected Twitter URL
         String currentUrl = driver.getCurrentUrl();
         String expectedUrl = "https://x.com/askebay";
         Assert.assertEquals("Twitter contact URL does not match", expectedUrl, currentUrl);
 
         System.out.println("Twitter contact link verified successfully: " + currentUrl);
 
-        // Close the Twitter window and switch back to the main window
       driver.close();
       driver.switchTo().window(mainWindowHandle);
 
-        // Close the main window as well
         driver.close();
     }
 
